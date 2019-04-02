@@ -10,3 +10,26 @@ console.log(fruits[1][1]); //5
 /** 空の配列の宣言方法(最も良いVer)シンプルだかららしいです */
 let animal:string[] = [];
 
+/** 連想配列の宣言方法 */
+let obj: {[key: string]:string}={
+    'hoge': 'ほげ',
+    'foo': 'ふう',
+    'bar': 'ばー'
+};
+console.log(obj); //{ hoge: 'ほげ', foo: 'ふう', bar: 'ばー' }
+console.log(obj.hoge); //ほげ-> プロパティ構文
+console.log(obj['hoge']); //ほげ-> ブラケット構文
+
+/** インターフェースを使って宣言 */
+// interfaceで中身を宣言しておく
+interface StringMap{
+    [index: string]:string;
+}
+let obj2:StringMap = {
+    'hoge': 'ほげhoge',
+    'foo': 'ふう',
+    'bar': 'ばー'
+};
+console.log(obj2.hoge); //ほげhoge
+
+
